@@ -4,23 +4,35 @@ import Square from "./components/Square"
 
 const App = () => {
   const [board, setBoard] = useState([
-    "?",
-    "?",
-    "?",
-    "?",
-    "?",
-    "?",
-    "?",
-    "?",
-    "?"
+    '❌',
+    '❌',
+    '❌',
+    '❌',
+    '❌',
+    '❌',
+    '❌',
+    '❌',
+    '❌'
   ])
 
   const handleClick = (id) => {
-    // alert(id) dont forget to add emojis
-    board[id] = 'emoji'
+    // assign a rando number to treasure
+    let treasureLocation = Math.floor(Math.random()* board.length)
+    let bombLocation = Math.floor(Math.random() * board.length)
+    console.log("treasure: ", treasureLocation)
+    console.log("bomb: ", bombLocation)
+    if (treasureLocation === id) {
+      board[id] = '🏆'
+      setBoard([...board])
+    } else if(bombLocation === treasureLocation || bombLocation === id) {
+      board[id] = "💣"
+      setBoard([...board])
+    } else {
+      board[id] = '💩'
     // spread operator ...
-    setBoard([...board])
+      setBoard([...board])
   }
+}
   return (
     <>
       <h1>Treasure Hunt Game</h1>
