@@ -35,8 +35,10 @@ const App = () => {
 }
   return (
     <>
-      <h1>Treasure Hunt Game</h1>
+    <div className="background">
+      <h1 className="title">Treasure Hunt Game</h1>
       <Square board={board} handleClick={handleClick}/>
+      </div>
     </>
   )
 }

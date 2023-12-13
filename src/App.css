@@ -1,5 +1,12 @@
-h1 {
+.background{
+
+}
+
+.title {
   text-align: center;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: linear-gradient(45deg, #ff9900, #a200ff);
 }
 
 .square {
