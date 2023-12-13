@@ -56,6 +56,21 @@ As a developer, you are tasked with creating a treasure hunt game. The user will
 **Acceptance Criteria**
 
 - Can see a page with a three-by-three grid board game
+    ```
+    .square {
+    height: 200px
+    width: 200px
+    border: 2 px solid black
+    text-align:
+    font-size:
+    }
+    .grid{
+        display: flex;
+        flex-wrap: wrap;
+        width: 610px;
+        margin: 0px auto;
+    }
+    ```
 - Can see a question mark in each square
 - Can click on any of the question marks and see an alert with the index position of that question mark in the array
 - Can click on any of the question marks and a tree emoji appears instead of the alert
